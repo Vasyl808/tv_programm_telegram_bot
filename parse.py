@@ -83,6 +83,7 @@ def parse(website_url: str) -> BeautifulSoup:
 
 if __name__ == '__main__':
     website = 'http://www.vsetv.com/schedule_channel_2027_week.html'
+
     soup_obj = parse(website)
 
     program_days = [utils.translate_text_to_ukrainian(program_day.get_text(strip=True))
