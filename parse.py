@@ -92,4 +92,5 @@ if __name__ == '__main__':
         program_day.get_text(strip=True): "\n".join(get_program(get_program_elements(program_day)))
         for program_day in get_available_days(soup_obj)
     }
+
     print(tv_schedule)
