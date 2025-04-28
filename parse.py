@@ -86,9 +86,10 @@ if __name__ == '__main__':
 
     soup_obj = parse(website)
 
-    program_days = [utils.translate_text_to_ukrainian(program_day.get_text(strip=True))
-                    for program_day in get_available_days(soup_obj)
-                    ]
+    program_days = [
+        utils.translate_text_to_ukrainian(program_day.get_text(strip=True))
+        for program_day in get_available_days(soup_obj)
+    ]
 
     tv_schedule = {
         program_day.get_text(strip=True): "\n".join(get_program(get_program_elements(program_day)))
